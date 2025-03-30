@@ -290,25 +290,25 @@ This project is licensed under the BSD 2-Clause License - see the [`LICENSE`](LI
 </div>
 
 <style>
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px #4ECDC4, 0 0 20px #4ECDC4, 0 0 30px #4ECDC4;
-  }
-  to {
-    box-shadow: 0 0 20px #FF6B6B, 0 0 30px #FF6B6B, 0 0 40px #FF6B6B;
-  }
-}
+   @keyframes glow {
+   from {
+      box-shadow: 0 0 10px #4ECDC4, 0 0 20px #4ECDC4, 0 0 30px #4ECDC4;
+   }
+   to {
+      box-shadow: 0 0 20px #FF6B6B, 0 0 30px #FF6B6B, 0 0 40px #FF6B6B;
+   }
+   }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+   @keyframes pulse {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.05);
+   }
+   100% {
+      transform: scale(1);
+   }
+   }
 </style>
 

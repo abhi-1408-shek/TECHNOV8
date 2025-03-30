@@ -1,37 +1,92 @@
-# **BudgetBaba** ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+<div align="center">
+
+# **BudgetBaba** 
+
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/) [![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/) [![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/) [![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/BudgetBaba) [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[<img src="https://via.placeholder.com/800x200.png?text=BudgetBaba+Banner" width="800">](https://github.com/yourusername/BudgetBaba)
+
+### 🚀 Your AI-Powered Financial Companion 💰
+
+<a href="#installation--setup"><img src="https://img.shields.io/badge/⚡%20Quick%20Start-1F222E?style=for-the-badge" alt="Quick Start" /></a> <a href="#usage-guide"><img src="https://img.shields.io/badge/📖%20User%20Guide-1F222E?style=for-the-badge" alt="User Guide" /></a> <a href="#contributing"><img src="https://img.shields.io/badge/🤝%20Contribute-1F222E?style=for-the-badge" alt="Contribute" /></a>
+
+</div>
 
 **BudgetBaba** is a comprehensive AI-powered personal finance management application built using **Streamlit**. It helps users track their expenses, manage income, visualize spending patterns, and receive AI-powered financial insights. The application features a secure authentication system and personalized transaction management for each user.
 
-**BudgetBaba** is a comprehensive AI-powered personal finance management application built using **Streamlit**. It helps users track their expenses, manage income, visualize spending patterns, and receive AI-powered financial insights. The application features a secure authentication system and personalized transaction management for each user.
+<div align="center">
+<img src="https://via.placeholder.com/800x400.png?text=BudgetBaba+Dashboard+Preview" width="800">
+</div>
 
-## **Key Features**
-- **🔐 Secure Authentication:** User registration and login system for personalized finance tracking
-- **💰 Transaction Management:** 
-  - Easy income and expense logging with categorization
-  - Real-time balance tracking
-  - Transaction history with delete functionality
-- **📊 Financial Analytics:**
-  - Interactive data visualization using Matplotlib and Seaborn
-  - Spending pattern analysis
-  - Category-wise expense breakdown
-- **🤖 AI-Powered Insights:**
-  - Smart financial suggestions
-  - Spending pattern analysis
-  - Personalized budget recommendations
+## ✨ **Key Features**
 
-## **Tech Stack**
-- **Frontend:** Streamlit
-- **Backend:** Python, SQLite
-- **Data Processing:** Pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn, Plotly
-- **AI/ML:** Scikit-learn for insights generation
+<table>
+<tr>
+<td width="50%">
 
-## **🔧 Installation & Setup**
+### 🔐 Secure Authentication
+- User registration and login system
+- Personalized finance tracking
+- Secure data storage
 
-### **Environment Variables Setup**
+### 💰 Transaction Management
+- Easy income/expense logging
+- Real-time balance tracking
+- Transaction history with delete functionality
+
+</td>
+<td width="50%">
+
+### 📊 Financial Analytics
+- Interactive data visualization
+- Spending pattern analysis
+- Category-wise expense breakdown
+
+### 🤖 AI-Powered Insights
+- Smart financial suggestions
+- Spending pattern analysis
+- Personalized budget recommendations
+
+</td>
+</tr>
+</table>
+
+## 🛠️ **Tech Stack**
+
+<table>
+<tr>
+<td width="50%">
+
+### Frontend
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+
+### Backend
+[![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)](https://www.python.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-%2307405e.svg?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+
+</td>
+<td width="50%">
+
+### Data Processing
+[![Pandas](https://img.shields.io/badge/Pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org/)
+
+### Visualization
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black)](https://matplotlib.org/)
+[![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white)](https://plotly.com/)
+
+</td>
+</tr>
+</table>
+
+## 🔧 **Installation & Setup**
+
+### Environment Variables Setup
 1. Create a `.env` file in the project root directory
 2. Add your Cohort API key:
-   ```
+   ```env
    COHORT_API_KEY=your_api_key_here
    ```
 3. To obtain your API key:
@@ -43,58 +98,76 @@
 
 ⚠️ **Important**: Never commit your `.env` file to version control!
 
-## **Installation**
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/BudgetBaba.git
-   cd BudgetBaba
-   ```
+### Quick Start
 
-2. **Set up Python virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/BudgetBaba.git
+cd BudgetBaba
 
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Set up Python virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-4. **Launch the application:**
-   ```bash
-   streamlit run Home.py
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-## **Usage Guide**
-1. **Getting Started:**
-   - Register a new account or login with existing credentials
-   - Navigate through features using the sidebar
+# Launch the application
+streamlit run Home.py
+```
 
-2. **Managing Transactions:**
-   - Log new income and expenses with categories
-   - Add transaction details including date, amount, and description
-   - View and manage transaction history
+## 📖 **Usage Guide**
 
-3. **Analyzing Finances:**
-   - View interactive charts and reports
-   - Get AI-powered insights about spending patterns
-   - Track budget progress and financial goals
+<table>
+<tr>
+<td width="33%">
 
-## **Contributing**
+### 🎯 Getting Started
+- Register a new account
+- Login with credentials
+- Navigate via sidebar
+
+</td>
+<td width="33%">
+
+### 💳 Managing Transactions
+- Log income/expenses
+- Add transaction details
+- Manage history
+
+</td>
+<td width="33%">
+
+### 📈 Analyzing Finances
+- View interactive charts
+- Get AI insights
+- Track financial goals
+
+</td>
+</tr>
+</table>
+
+## 🤝 **Contributing**
+
 We welcome contributions! Here's how you can help:
+
 1. Fork the repository
 2. Create your feature branch: `git checkout -b feature/AmazingFeature`
 3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
 4. Push to the branch: `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 
-## **📜 License**
-This project is licensed under the BSD 2-Clause License - see the `LICENSE` file for details.
+## 📜 **License**
+
+This project is licensed under the BSD 2-Clause License - see the [`LICENSE`](LICENSE) file for details.
 
 ---
 
-✨ **BudgetBaba - Your AI-Powered Financial Companion** 💰 ✨
+<div align="center">
 
-![Finance Dashboard](https://via.placeholder.com/800x400.png?text=BudgetBaba+Dashboard+Preview)
+### ✨ Made with ❤️ by BudgetBaba Team ✨
+
+<a href="https://github.com/yourusername/BudgetBaba/issues"><img src="https://img.shields.io/github/issues/yourusername/BudgetBaba?style=flat-square" alt="Issues" /></a> <a href="https://github.com/yourusername/BudgetBaba/network/members"><img src="https://img.shields.io/github/forks/yourusername/BudgetBaba?style=flat-square" alt="Forks" /></a> <a href="https://github.com/yourusername/BudgetBaba/stargazers"><img src="https://img.shields.io/github/stars/yourusername/BudgetBaba?style=flat-square" alt="Stars" /></a>
+
+</div>
 

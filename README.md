@@ -1,14 +1,45 @@
-# TECHNOV8 - Your AI-Powered Financial Companion
+<div align="center">
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+# 🎯 BUDGET-BABA
+### Your AI-Powered Financial Companion
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/abhi-1408-shek/TECHNOV8) [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+<div align="center">
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+</div>
 
-[![Engineered by Abhishek](https://img.shields.io/badge/Engineered%20by-Abhishek-blue?style=for-the-badge&logo=github)](https://github.com/abhi-1408-shek)
+<div align="center">
+  <a href="https://github.com/abhi-1408-shek/TECHNOV8">
+    <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance" />
+  </a>
+  <a href="https://opensource.org/licenses/BSD-2-Clause">
+    <img src="https://img.shields.io/badge/License-BSD_2--Clause-orange.svg" alt="License" />
+  </a>
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" />
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/abhi-1408-shek">
+    <img src="https://img.shields.io/badge/Engineered%20by-Abhishek-blue?style=for-the-badge&logo=github" alt="Engineered by Abhishek" />
+  </a>
+</div>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" />
+</p>
+
+</div>
 
 ## 🚀 About BudgetBaba
 
+<div style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); padding: 20px; border-radius: 10px; margin: 10px 0;">
 BudgetBaba is a comprehensive AI-powered personal finance management application built using Streamlit. It helps users track their expenses, manage income, visualize spending patterns, and receive AI-powered financial insights. The application features a secure authentication system and personalized transaction management for each user.
+</div>
 
 ## ✨ Key Features
 
@@ -32,22 +63,34 @@ BudgetBaba is a comprehensive AI-powered personal finance management application
 - Spending pattern analysis
 - Personalized budget recommendations
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="colored" />
+</p>
+
 ## 🛠️ Tech Stack
 
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+
 ### Frontend
-- ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white)
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white" alt="Streamlit" />
 
 ### Backend
-- ![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
-- ![SQLite](https://img.shields.io/badge/SQLite-%2307405e.svg?style=flat-square&logo=sqlite&logoColor=white)
+<img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" alt="Python" />
+<img src="https://img.shields.io/badge/SQLite-%2307405e.svg?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
 
 ### Data Processing
-- ![Pandas](https://img.shields.io/badge/Pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white)
-- ![NumPy](https://img.shields.io/badge/NumPy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white)
+<img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
+<img src="https://img.shields.io/badge/NumPy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
 
 ### Visualization
-- ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black)
-- ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white)
+<img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black" alt="Matplotlib" />
+<img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white" alt="Plotly" />
+
+</div>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" alt="solar" />
+</p>
 
 ## 🔧 Installation & Setup
 
@@ -83,6 +126,10 @@ pip install -r requirements.txt
 streamlit run Home.py
 ```
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" alt="fire" />
+</p>
+
 ## 📖 Usage Guide
 
 ### 🎯 Getting Started
@@ -100,6 +147,10 @@ streamlit run Home.py
 - Get AI insights
 - Track financial goals
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/vintage.png" alt="vintage" />
+</p>
+
 ## 🤝 Contributing
 
 We welcome contributions! Here's how you can help:
@@ -114,9 +165,23 @@ We welcome contributions! Here's how you can help:
 
 This project is licensed under the BSD 2-Clause License - see the [LICENSE](LICENSE) file for details.
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" />
+</p>
+
+<div align="center">
 
 ✨ Made with ❤️ by Budget-Baba Team ✨
 
-[![GitHub issues](https://img.shields.io/github/issues/abhi-1408-shek/TECHNOV8?style=flat-square)](https://github.com/abhi-1408-shek/TECHNOV8/issues) [![GitHub forks](https://img.shields.io/github/forks/abhi-1408-shek/TECHNOV8?style=flat-square)](https://github.com/abhi-1408-shek/TECHNOV8/network/members) [![GitHub stars](https://img.shields.io/github/stars/abhi-1408-shek/TECHNOV8?style=flat-square)](https://github.com/abhi-1408-shek/TECHNOV8/stargazers)
+<a href="https://github.com/abhi-1408-shek/TECHNOV8/issues">
+  <img src="https://img.shields.io/github/issues/abhi-1408-shek/TECHNOV8?style=flat-square" alt="GitHub issues" />
+</a>
+<a href="https://github.com/abhi-1408-shek/TECHNOV8/network/members">
+  <img src="https://img.shields.io/github/forks/abhi-1408-shek/TECHNOV8?style=flat-square" alt="GitHub forks" />
+</a>
+<a href="https://github.com/abhi-1408-shek/TECHNOV8/stargazers">
+  <img src="https://img.shields.io/github/stars/abhi-1408-shek/TECHNOV8?style=flat-square" alt="GitHub stars" />
+</a>
+
+</div>
 

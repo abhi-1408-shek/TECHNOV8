@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 import streamlit as st
-
+from dotenv import load_dotenv
 
 
 # Income Manager class using db
@@ -161,47 +161,91 @@ class Account:
 
         return transactions
     def generate_ai_insights(self):
-        """Generate AI-based insights and suggestions for managing expenses."""
+        """Generate AI-based insights and suggestions for managing expenses using Cohere API."""
+        import requests
+        import os
+        
+        load_dotenv()
+        # Get API key from environment variable
+        api_key = os.getenv('COHERE_API_KEY')
+        if not api_key:
+            st.error("Cohere API key not found. Please set COHERE_API_KEY environment variable.")
+            return []
+            
         transactions = self.format_transactions_for_ai()
-
-        # Example logic for AI processing (replace this with your actual AI model)
-        insights = []
         
-        # 1. Analyze spending patterns
-        expense_categories = {}
-        for expense in transactions['expenses']:
-            category = expense['category']
-            amount = expense['amount']
-            if category in expense_categories:
-                expense_categories[category] += amount
+        # Prepare prompt for Cohere
+        prompt = f"""Analyze these financial transactions and provide personalized insights:
+        Income: {transactions['income']}
+        Expenses: {transactions['expenses']}
+        
+        Please provide:
+        1. Spending pattern analysis
+        2. Budget optimization suggestions
+        3. Savings recommendations
+        4. Any financial red flags
+        
+        Return response in bullet points with emojis for better readability."""
+        
+        try:
+            # Call Cohere API
+            headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+                "Cohere-Version": "2022-12-06"
+            }
+            data = {
+                "prompt": prompt,
+                "max_tokens": 500,
+                "temperature": 0.7
+            }
+            
+            response = requests.post(
+                "https://api.cohere.ai/generate",
+                headers=headers,
+                json=data
+            )
+            response.raise_for_status()
+            
+            # Format the AI response
+            insights = response.json()['generations'][0]['text'].split('\n')
+            return insights
+            
+        except Exception as e:
+            st.error(f"AI analysis failed: {str(e)}")
+            # Fallback to basic analysis if API fails
+            expense_categories = {}
+            for expense in transactions['expenses']:
+                category = expense['category']
+                amount = expense['amount']
+                if category in expense_categories:
+                    expense_categories[category] += amount
+                else:
+                    expense_categories[category] = amount
+            
+            insights = []
+            if expense_categories:
+                max_category = max(expense_categories, key=expense_categories.get)
+                insights.append(f"⚡ You are spending the most on '{max_category}'. Consider reducing expenses in this category.")
+            
+            total_income = sum(item['amount'] for item in transactions['income'])
+            total_expense = sum(item['amount'] for item in transactions['expenses'])
+            
+            if total_income > 0:
+                expense_ratio = (total_expense / total_income) * 100
+                if expense_ratio > 70:
+                    insights.append(f"⚠️ Your expenses are {expense_ratio:.2f}% of your income. Try to keep this below 50%.")
+                else:
+                    insights.append(f"✅ Good job! Your expenses are under control at {expense_ratio:.2f}% of your income.")
             else:
-                expense_categories[category] = amount
-        
-        # Suggest reducing highest spending category
-        if expense_categories:
-            max_category = max(expense_categories, key=expense_categories.get)
-            insights.append(f"⚡ You are spending the most on '{max_category}'. Consider reducing expenses in this category.")
-
-        # 2. Analyze income-to-expense ratio
-        total_income = sum(item['amount'] for item in transactions['income'])
-        total_expense = sum(item['amount'] for item in transactions['expenses'])
-        
-        if total_income > 0:
-            expense_ratio = (total_expense / total_income) * 100
-            if expense_ratio > 70:
-                insights.append(f"⚠️ Your expenses are {expense_ratio:.2f}% of your income. Try to keep this below 50%.")
-            else:
-                insights.append(f"✅ Good job! Your expenses are under control at {expense_ratio:.2f}% of your income.")
-        else:
-            insights.append("❗ No income records found. Please add income data to analyze your expenses correctly.")
-
-        # 3. Savings goal suggestion
-        if total_income > 0 and total_expense > 0:
-            savings = total_income - total_expense
-            if savings < total_income * 0.2:
-                insights.append(f"💡 Consider saving at least 20% of your income. Currently, you're saving only {savings:.2f}.")
-
-        return insights
+                insights.append("❗ No income records found. Please add income data to analyze your expenses correctly.")
+            
+            if total_income > 0 and total_expense > 0:
+                savings = total_income - total_expense
+                if savings < total_income * 0.2:
+                    insights.append(f"💡 Consider saving at least 20% of your income. Currently, you're saving only {savings:.2f}.")
+            
+            return insights
     
     
 

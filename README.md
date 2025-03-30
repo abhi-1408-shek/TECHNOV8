@@ -6,7 +6,7 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/BudgetBaba) [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[<img src="https://via.placeholder.com/800x200.png?text=BudgetBaba+Banner" width="800">](https://github.com/yourusername/BudgetBaba)
+![BudgetBaba Banner](https://raw.githubusercontent.com/abhi-1408-shek/TECHNOV8/main/assets/banner.png)
 
 ### 🚀 Your AI-Powered Financial Companion 💰
 
@@ -17,7 +17,7 @@
 **BudgetBaba** is a comprehensive AI-powered personal finance management application built using **Streamlit**. It helps users track their expenses, manage income, visualize spending patterns, and receive AI-powered financial insights. The application features a secure authentication system and personalized transaction management for each user.
 
 <div align="center">
-<img src="https://via.placeholder.com/800x400.png?text=BudgetBaba+Dashboard+Preview" width="800">
+![BudgetBaba Dashboard](https://raw.githubusercontent.com/abhi-1408-shek/TECHNOV8/main/assets/dashboard.png)
 </div>
 
 ## ✨ **Key Features**

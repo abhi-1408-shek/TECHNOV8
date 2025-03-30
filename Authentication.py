@@ -2,7 +2,6 @@ import sqlite3
 import streamlit as st
 import hashlib  # to secure the password of user
 class AuthManager:
-
     def __init__(self, db_name="users.db"):
         self.conn = sqlite3.connect(db_name)
         self.cursor = self.conn.cursor()

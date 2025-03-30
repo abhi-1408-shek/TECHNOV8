@@ -1,4 +1,6 @@
-# **BudgetBaba**
+# **BudgetBaba** ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+
+**BudgetBaba** is a comprehensive AI-powered personal finance management application built using **Streamlit**. It helps users track their expenses, manage income, visualize spending patterns, and receive AI-powered financial insights. The application features a secure authentication system and personalized transaction management for each user.
 
 **BudgetBaba** is a comprehensive AI-powered personal finance management application built using **Streamlit**. It helps users track their expenses, manage income, visualize spending patterns, and receive AI-powered financial insights. The application features a secure authentication system and personalized transaction management for each user.
 
@@ -23,6 +25,23 @@
 - **Data Processing:** Pandas, NumPy
 - **Visualization:** Matplotlib, Seaborn, Plotly
 - **AI/ML:** Scikit-learn for insights generation
+
+## **🔧 Installation & Setup**
+
+### **Environment Variables Setup**
+1. Create a `.env` file in the project root directory
+2. Add your Cohort API key:
+   ```
+   COHORT_API_KEY=your_api_key_here
+   ```
+3. To obtain your API key:
+   - Visit [Cohort API Dashboard](https://cohortapi.com)
+   - Sign up for an account
+   - Navigate to API Keys section
+   - Generate a new key and copy it
+   - Paste it in your `.env` file
+
+⚠️ **Important**: Never commit your `.env` file to version control!
 
 ## **Installation**
 1. **Clone the repository:**
@@ -70,10 +89,12 @@ We welcome contributions! Here's how you can help:
 4. Push to the branch: `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 
-## **License**
+## **📜 License**
 This project is licensed under the BSD 2-Clause License - see the `LICENSE` file for details.
 
 ---
 
-**BudgetBaba - Your AI-Powered Financial Companion** 💰
+✨ **BudgetBaba - Your AI-Powered Financial Companion** 💰 ✨
+
+![Finance Dashboard](https://via.placeholder.com/800x400.png?text=BudgetBaba+Dashboard+Preview)
 

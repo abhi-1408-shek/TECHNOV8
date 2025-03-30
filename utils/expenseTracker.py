@@ -76,8 +76,6 @@ class ExpenseManager:
 
 
 
-
-
 # Account class using db
 class Account:
     def __init__(self, db_name):
@@ -161,20 +159,20 @@ class Account:
 
         return transactions
     def generate_ai_insights(self):
-        """Generate AI-based insights and suggestions for managing expenses using Cohere API."""
+        """Generate AI-based insights and suggestions for managing expenses using DeepSeek API."""
         import requests
         import os
         
         load_dotenv()
         # Get API key from environment variable
-        api_key = os.getenv('COHERE_API_KEY')
+        api_key = os.getenv('DEEPSEEK_API_KEY')
         if not api_key:
-            st.error("Cohere API key not found. Please set COHERE_API_KEY environment variable.")
+            st.error("DeepSeek API key not found. Please set DEEPSEEK_API_KEY environment variable.")
             return []
             
         transactions = self.format_transactions_for_ai()
         
-        # Prepare prompt for Cohere
+        # Prepare prompt for DeepSeek
         prompt = f"""Analyze these financial transactions and provide personalized insights:
         Income: {transactions['income']}
         Expenses: {transactions['expenses']}
@@ -188,27 +186,33 @@ class Account:
         Return response in bullet points with emojis for better readability."""
         
         try:
-            # Call Cohere API
+            # Call DeepSeek API
             headers = {
                 "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-                "Cohere-Version": "2022-12-06"
+                "Content-Type": "application/json"
             }
             data = {
-                "prompt": prompt,
-                "max_tokens": 500,
+                "model": "deepseek-chat",
+                "messages": [
+                    {"role": "system", "content": "You are a financial advisor analyzing spending patterns."},
+                    {"role": "user", "content": prompt}
+                ],
                 "temperature": 0.7
             }
             
             response = requests.post(
-                "https://api.cohere.ai/generate",
+                "https://api.deepseek.com/v1/chat/completions",
                 headers=headers,
                 json=data
             )
             response.raise_for_status()
             
             # Format the AI response
-            insights = response.json()['generations'][0]['text'].split('\n')
+            insights = response.json()['choices'][0]['message']['content'].split('\n')
+            return insights
+            
+            # Format the AI response
+            insights = response.choices[0].message.content.split('\n')
             return insights
             
         except Exception as e:

@@ -1,0 +1,124 @@
+:root[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --card-background: #f0f2f6;
+  --border-color: #e0e0e0;
+  --chart-background: #ffffff;
+  --sidebar-background: #f8f9fa;
+  --button-background: #ff4b87;
+  --button-text: #ffffff;
+  --hover-color: #ff6b9e;
+}
+
+:root[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --border-color: #404040;
+  --chart-background: #1e1e1e;
+  --sidebar-background: #1a1a1a;
+  --button-background: #ff4b87;
+  --button-text: #ffffff;
+  --hover-color: #ff6b9e;
+}
+
+/* Global transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply theme colors */
+.stApp {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Style for cards and containers */
+.stMarkdown, .stDataFrame {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Style for plots */
+.js-plotly-plot {
+  background-color: var(--chart-background) !important;
+}
+
+.js-plotly-plot .main-svg {
+  background-color: var(--chart-background) !important;
+}
+
+.js-plotly-plot .plot-container {
+  color: var(--text-color) !important;
+}
+
+.js-plotly-plot .xtick text,
+.js-plotly-plot .ytick text,
+.js-plotly-plot .gtitle,
+.js-plotly-plot .annotation-text {
+  fill: var(--text-color) !important;
+}
+
+.js-plotly-plot .legend-title-text,
+.js-plotly-plot .legend-text {
+  fill: var(--text-color) !important;
+}
+
+/* Style for sidebar */
+.css-1d391kg, .css-12oz5g7 {
+  background-color: var(--sidebar-background);
+}
+
+/* Style for buttons */
+.stButton > button {
+  background-color: var(--button-background) !important;
+  color: var(--button-text) !important;
+  transition: transform 0.08s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.08s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s ease !important;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+}
+
+.stButton > button:hover {
+  background-color: var(--hover-color) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stButton > button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--button-background) !important;
+  transition: transform 0.05s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.05s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure text contrast */
+.streamlit-expanderHeader, .stMarkdown p, .st-emotion-cache-ue6h4q, .st-emotion-cache-1avcm0n {
+  color: var(--text-color) !important;
+}
+
+/* Style for expander content */
+.st-emotion-cache-1q1n0ol {
+  background-color: var(--card-background) !important;
+  color: var(--text-color) !important;
+}
+
+/* Style for text input */
+.st-emotion-cache-1x8cf1d {
+  background-color: var(--card-background) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Style for text input label */
+.st-emotion-cache-16idsys p {
+  color: var(--text-color) !important;
+}
